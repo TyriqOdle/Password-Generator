@@ -20,6 +20,17 @@ special_chars = [
     '!', '@', '#', '$', '%', '^', '&', '*',
 ]
 
+
+# User selects the platform name for the password
+
+platform = input("Enter the plarform for this password: ")
+
+# User selects the username name for the password
+
+username = input("Enter the username: ")
+
+# User selects length
+
 user_length = int(input("1. Short (10 Characters)" \
 "2. Medium (15 characters)" \
 "3 Long (24 Characters)" \
@@ -40,8 +51,8 @@ for i in range(length):
     password += random.choice(random.choice(letters + numbers + special_chars))
 
 
-file.write(password + "\n")
+file.write(platform + "\t" + username + "\t" + password + "\n")
 file.close()
 
-print(password)
+print("Password Has been successfully saved to the file.")
 
